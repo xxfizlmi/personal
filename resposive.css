@@ -1,0 +1,94 @@
+@media screen and (max-width: 600px) {
+  .header-600 {
+    padding: 0;
+  }
+  nav {
+    flex-direction: column;
+    padding: 0;
+  }
+  ul {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .nav-ul-600 {
+    overflow: hidden; /* Aktifkan scroll horizontal */
+    display: none;
+  }
+  .nav-ul-600.open {
+    display: flex; /* Menampilkan menu saat terbuka */
+  }
+  .nav-li-600 {
+    width: 100%;
+    padding: 2vh 0;
+    text-align: center;
+  }
+  .nav-li-600 {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  .menu-icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  .bar {
+    height: 4px;
+    background-color: var(--color-white);
+    border-radius: 100px;
+  }
+  /* Animasi untuk ikon hamburger */
+  .menu-icon.open .bar:nth-child(1) {
+    transform: rotate(45deg); /* Putar bar pertama */
+    position: relative;
+    top: 13px;
+  }
+
+  .menu-icon.open .bar:nth-child(2) {
+    opacity: 0; /* Sembunyikan bar kedua */
+  }
+
+  .menu-icon.open .bar:nth-child(3) {
+    transform: rotate(-45deg); /* Putar bar ketiga */
+    position: relative;
+    top: -13px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .menu-icon {
+    display: none;
+  }
+}
+@media screen and (max-width: 960px) {
+  ul {
+    display: flex;
+    overflow-x: auto; /* Aktifkan scroll horizontal */
+    white-space: nowrap; /* Hindari wrapping ke baris baru */
+    scroll-behavior: auto; /* Scroll halus */
+    max-width: 100%; /* Tentukan batas lebar container */
+    -webkit-overflow-scrolling: touch;
+  }
+  ul::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  ul::-webkit-scrollbar-thumb {
+    background-color: rgb(53, 94, 141, 0.5);
+    border-radius: 10px;
+  }
+
+  ul::-webkit-scrollbar-track {
+    background-color: var(--bg-primary);
+  }
+}

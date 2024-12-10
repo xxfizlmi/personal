@@ -1,0 +1,67 @@
+@import url(/resposive.css);
+:root {
+  --bg-primary: linear-gradient(to right, #355e8d, #0f1a27);
+  --color-white: white;
+  --color-primary: rgb(53, 94, 141);
+}
+
+* {
+}
+
+a {
+  color: var(--color-white);
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+header {
+  background: var(--bg-primary);
+  padding: 0 2vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+a img {
+  width: 20vh;
+}
+
+ul {
+  display:flex;
+  margin: 0;
+}
+li {
+  list-style-type: none;
+  padding: 3vh 0;
+  background-color: transparent;
+  color: white;
+  transition: all 0.3s ease;
+  margin: auto;
+  cursor: pointer;
+}
+li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+li a {
+  font-size: 20px;
+  padding: 3vh;
+  color: inherit;
+}
+
+
+
+
+
