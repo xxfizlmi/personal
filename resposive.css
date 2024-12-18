@@ -1,5 +1,5 @@
 @media screen and (max-width: 600px) {
-  .header-600 {
+  .header-600, section {
     padding: 0;
   }
   nav {
@@ -69,6 +69,7 @@
   .menu-icon {
     display: none;
   }
+
 }
 @media screen and (max-width: 960px) {
   ul {

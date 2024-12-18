@@ -1,67 +1,232 @@
-@import url(/resposive.css);
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+
 :root {
-  --bg-primary: linear-gradient(to right, #355e8d, #0f1a27);
-  --color-white: white;
-  --color-primary: rgb(53, 94, 141);
+  --bg-primary: linear-gradient(to top, #355e8d, #0f1a27);
+  --white: #ffffff;
+  --bg-primary-opcaity: rgb(255, 255, 255, 20%);
 }
 
 * {
+  /* border: 2px solid; */
+  font-size: 25px;
+  color: var(--white);
+  font-family: "Red Hat Text", serif;
+  font-style: normal;
 }
-
-a {
-  color: var(--color-white);
-}
-
-a {
-  text-decoration: none;
-}
-
 html,
 body {
   margin: 0;
 }
+body {
+  background: var(--bg-primary);
+}
 
 header {
-  background: var(--bg-primary);
-  padding: 0 2vh;
+  background: var(--bg-primary-opcaity);
 }
 
 nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px;
 }
 
-a img {
+nav img {
+  width: 30vh;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--white);
+  padding: 25px;
+}
+nav a:hover {
+  background: var(--bg-primary);
+}
+
+section {
+  display: flex;
+  margin: 20px;
+}
+
+section .container {
+  margin: 20px;
+  padding: 50px;
+  width: 100%;
+  text-align: center;
+  background: var(--bg-primary-opcaity);
+  border-radius: 20px;
+}
+
+section p,
+section h1 {
+  font-size: 30px;
+  text-align: justify;
+}
+
+.media-sosial {
+  margin: 25px 0;
+  justify-self: start;
+}
+
+.media-sosial img {
+  padding: 0;
+  margin: 0 15px;
+}
+section img {
+  padding: 10vh;
+  width: auto;
+  text-align: center;
+}
+
+#education-experience img {
+  width: 7vh;
+  padding: 0;
+}
+#education-experience .company {
+  margin: 2vh 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid p:nth-child(odd) {
+  justify-self: left;
+}
+.grid p:nth-child(even) {
+  justify-self: right;
+}
+
+.education .grid > p:nth-child(odd) {
+  padding-left: 9vh;
+}
+#education-experience p {
+  font-size: 25px;
+  margin: 2px;
+}
+
+.flex {
+  display: flex;
+}
+
+.company .logo {
+  justify-content: left;
+  gap: 10px;
+}
+
+.logo-skill {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+}
+.logo-skill img {
+  width: 8vh;
+  padding: 0;
+}
+.logo-skill p {
+  margin: auto;
+}
+.logo-skill progress {
+  width: 24vh;
+  height: 20px;
+}
+
+#portfolio {
+  flex-wrap: wrap;
+}
+.card {
+  margin: 25px auto;
+  border-radius: 25px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-primary-opcaity);
+}
+.card img {
+  margin: 0;
+  width: 55vh;
+  border-radius: 20px;
+  padding: 0;
+  height: 6cm;
+  object-fit: cover;
+}
+.card h3,
+.card p {
+  width: 56vh;
+  margin: 25px 0 0 0;
+}
+.card button {
+  width: 20vh;
+  margin: 25px auto;
+  height: 6vh;
+}
+
+.flex {
+  display: flex;
+}
+
+footer {
+  background: var(--bg-primary-opcaity);
+}
+footer .container {
+  margin: 25px auto;
+}
+
+.contact-me {
+  display: flex;
+  align-items: center;
+}
+
+.contact-me img {
+  width: 30px;
+  margin: 0;
+}
+.contact-me p {
+  margin: 10px 10px;
+}
+footer .media-sosial {
+  text-align: center;
+}
+footer .media-sosial > img {
+  width: 50px;
+  margin: 0;
+}
+
+footer .row {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 20px;
+}
+
+footer label {
+  /* align-self:flex-start; */
   width: 20vh;
 }
 
-ul {
-  display:flex;
-  margin: 0;
+footer input {
+  padding: 10px 15px;
+  color: #0f1a27;
 }
-li {
-  list-style-type: none;
-  padding: 3vh 0;
-  background-color: transparent;
-  color: white;
-  transition: all 0.3s ease;
-  margin: auto;
-  cursor: pointer;
-}
-li:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
+footer textarea {
+  max-width: 7cm;
+  min-width: 7cm;
+  min-height: 3cm;
+  max-height: 3cm;
+  padding: 10px 15px;
+  color: #0f1a27;
 }
 
-li a {
-  font-size: 20px;
-  padding: 3vh;
-  color: inherit;
+footer .entities {
+  text-align: center;
+  padding: 5px;
 }
-
-
-
-
-
